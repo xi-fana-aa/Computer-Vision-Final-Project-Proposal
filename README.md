@@ -1,7 +1,7 @@
 # Computer-Vision-Final-Project
 本项目基于 YOLOv8 和 Stockfish 实现了国际象棋局面识别与走法推荐系统。用户上传棋局图片，系统自动完成棋盘检测、棋子识别、FEN 串生成，并调用国际象棋引擎计算最优走法。
 
-项目描述视频：
+项目描述视频：https://www.bilibili.com/video/BV132KbzKE8G
 
 后端结构：
 
