@@ -1,11 +1,11 @@
 # Computer-Vision-Final-Project
-本项目基于 YOLOv8 和 Stockfish 实现了国际象棋局面识别与走法推荐系统。用户上传棋局图片，系统自动完成棋盘检测、棋子识别、FEN 串生成，并调用国际象棋引擎计算最佳走法。
+本项目基于 YOLOv8 和 Stockfish 实现了国际象棋局面识别与走法推荐系统。用户上传棋局图片，系统自动完成棋盘检测、棋子识别、FEN 串生成，并调用国际象棋引擎计算最优走法。
 
 项目描述视频：
 
-项目结构：
+后端结构：
 
-project/
+back_end/
     ├─ app.py                     # 后端主干部分，定义接口
     ├─ logic/
     │  ├─ fen_generator.py        # 将检测结果转为FEN字符串
@@ -16,9 +16,28 @@ project/
     │  └─ stockfish-windows-x86-64-avx2.exe
     ├─ best.pt                    # YOLOv8训练好的棋子识别模型
     ├─ requirements.txt           # 项目依赖库
+    
+前端结构：
+
+chess-recognizer-ui/
+    ├─ public/           # 静态资源
+    ├─ src/              # 源代码
+    ├─ .gitignore        # 忽略配置
+    ├─ eslint.config.js  # ESLint 配置
+    ├─ index.html        # 项目入口
+    ├─ package.json      # 依赖和脚本
+    ├─ package-lock.json # 锁定依赖
+    ├─ pnpm-lock.yaml    # 可选，pnpm锁定文件
+    ├─ vite.config.js    # Vite 配置
+    ├─ README.md        
 
 快速开始：
 
+下载前端部分front_end.zip、后端部分back_end.zip
+
+后端部分：
+
+进入后端文件夹根目录back_end
 
 安装依赖
 
@@ -28,18 +47,16 @@ pip install -r requirements.txt
 
 uvicorn app:app --reload
 
-调用接口
+前端部分：
 
-POST /api/recognize
+进入前端文件夹根目录chess-recognizer-ui
 
-Content-Type: multipart/form-data
+安装依赖
 
-Body: image=<棋局图片文件>
+npm install
 
-Response:
+启动服务
 
-{
-  "fen": "<FEN字符串>",
-  
-  "best_move": "<最佳走法>"
-}
+npm run dev
+
+默认情况下，会在 http://localhost:5173 启动，浏览器访问该链接即可使用本项目。
