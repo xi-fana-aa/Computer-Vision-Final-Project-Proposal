@@ -1,10 +1,13 @@
-# Computer-Vision-Final-Project
+# 国际象棋局面识别与走法推荐系统
+
+项目描述视频：https://www.bilibili.com/video/BV132KbzKE8G<br>
+
 本项目基于 YOLOv8 和 Stockfish 实现了国际象棋局面识别与走法推荐系统。用户上传棋局图片，系统自动完成棋盘检测、棋子识别、FEN 串生成，并调用国际象棋引擎计算最优走法。
 
-项目描述视频：https://www.bilibili.com/video/BV132KbzKE8G
+## 项目结构：
 
-后端结构：
-
+后端结构：<br>
+```
 back_end/
     ├─ app.py                     # 后端主干部分，定义接口
     ├─ logic/
@@ -16,9 +19,11 @@ back_end/
     │  └─ stockfish-windows-x86-64-avx2.exe
     ├─ best.pt                    # YOLOv8训练好的棋子识别模型
     ├─ requirements.txt           # 项目依赖库
-    
-前端结构：
 
+```
+    
+前端结构：<br>
+```
 chess-recognizer-ui/
     ├─ public/           # 静态资源
     ├─ src/              # 源代码
@@ -30,33 +35,40 @@ chess-recognizer-ui/
     ├─ pnpm-lock.yaml    # 可选，pnpm锁定文件
     ├─ vite.config.js    # Vite 配置
     ├─ README.md        
+```
 
-快速开始：
 
-下载前端部分front_end.zip、后端部分back_end.zip
+## 快速开始
 
-后端部分：
+下载前端部分front_end.zip、后端部分back_end.zip<br>
 
-进入后端文件夹根目录back_end
+后端部分：<br>
 
-安装依赖
+进入后端文件夹根目录back_end<br>
 
-pip install -r requirements.txt
+安装依赖<br>
 
-启动服务
+`pip install -r requirements.txt`
 
-uvicorn app:app --reload
+启动服务<br>
 
-前端部分：
+`uvicorn app:app --reload`
 
-进入前端文件夹根目录chess-recognizer-ui
+<br>
 
-安装依赖
+前端部分：<br>
 
-npm install
+进入前端文件夹根目录chess-recognizer-ui<br>
 
-启动服务
+安装依赖<br>
 
-npm run dev
+`npm install`
+
+启动服务<br>
+
+`npm run dev`
 
 默认情况下，会在 http://localhost:5173 启动，浏览器访问该链接即可使用本项目。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwODE4NDQ4MTRdfQ==
+-->
