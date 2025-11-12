@@ -1,0 +1,9 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+torch==2.0.1
+python-multipart==0.0.6
+python-chess==1.999
+numpy==1.25.2
+Pillow==10.0.0
+opencv-python
+ultralytics
