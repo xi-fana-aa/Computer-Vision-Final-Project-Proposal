@@ -37,8 +37,7 @@ chess-recognizer-ui/
 
 
 ## 快速开始
-
-下载前端部分front_end.zip、后端部分back_end.zip<br>
+<br>
 
 后端部分：<br>
 
